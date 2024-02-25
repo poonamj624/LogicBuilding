@@ -1,0 +1,243 @@
+Q. Accept string from user , accept a character from user and count the occurrence of the same==>
+
+class FindOccurances
+{
+    public static int count(String s, char c)
+    {
+        int cnt = 0;
+        for (int i=0; i<s.length(); i++)
+        {
+            // checking character in string
+            if (s.charAt(i) == c)
+            cnt++;
+        } 
+        return cnt;
+    }
+    public static void main(String args[])
+    {
+        String str= "shrisha";
+        char c = 's';
+        System.out.println(count(str, c));
+    }
+}
+---------------------------------------------------------------------------
+Q.Accept string and check if it is palindrome or not==>
+
+public class PallindromString
+{
+	static boolean isPalindrome(String str)
+	{
+		int i = 0, j = str.length() - 1;
+		while (i < j) {
+			if (str.charAt(i) != str.charAt(j))
+				return false;
+			i++;
+			j--;
+		}
+		return true;
+	}
+	public static void main(String[] args)
+	{
+		String str = "nitin";
+		str = str.toLowerCase();
+		if (isPalindrome(str))
+			System.out.print("Yes");
+		else
+			System.out.print("No");
+	}
+}
+----------------------------------------------------------------------------------------------
+ Q3. Accept a string and reverse it=>
+
+import java.io.*;
+import java.util.Scanner;
+ 
+class ReverseStr
+{
+    public static void main (String[] args) {
+       
+        String str= "Shrisha shri", nstr="";
+        char ch;
+      System.out.print("Original word: "+str);
+     System.out.println(); 
+       
+      for (int i=0; i<str.length(); i++)
+      {
+        ch= str.charAt(i);
+        nstr= ch+nstr; 
+      }
+      System.out.println("Reversed word: "+ nstr);
+    }
+}
+ -------------------------------------------------------------------
+Q.Accept a sentence from user and count number of words=>
+public class GFG 
+{ 
+   public static void main(String args[]) 
+{ 
+      String msg = "Tutorials Point Welcomes You!!";
+      System.out.println("The given String is: " + msg);
+      int cnt = 1;	//initilize to 1
+      int i = 0; 
+      while (i < msg.length()) { 
+         
+         if ((msg.charAt(i) == ' ') && (msg.charAt(i + 1) != ' '))  {
+            cnt++; 
+         }
+         i++; 
+      } 
+      System.out.println("Number of words in string: " +  cnt);
+   } 
+}
+----------------------------------------------------------------------------
+Q5.. Accept two string append 1st one with the second one=>
+class GFG 
+{
+    public static void main(String args[])
+    {
+        String s = "Shrisha ";
+        s = s.concat("and Shriansh");
+        System.out.println(s);
+    }
+}
+-------------------------------------------------------------------------
+Q.6. Accept two string and check both are same or not =>equal
+solution1=>
+public class GFG
+ {
+    public static void main(String[] args) {
+
+        String style = "Bold";
+        String style2 = "Bold";
+
+        if(style == style2)
+            System.out.println("Equal");
+        else
+            System.out.println("Not Equal");
+    }
+}
+---------
+solution2=>Not Equal
+public class GFG
+ {
+    public static void main(String[] args) {
+
+        String style = "Shrisha";
+        String style2 = "Shriansh";
+
+        if(style.equals(style2))
+            System.out.println("Equal");
+        else
+            System.out.println("Not Equal");
+    }
+}
+------------------------------------------------------------
+Q7.. Accept 5 name from user and print their name in ascending order=>
+import java.io.*;
+import java.util.*;
+ 
+class GFG 
+{
+    public static void main(String[] args)
+    {
+        int n = 5;
+        String names[] = { "Shrisha", "Ajay", "Gourav", "Riya","Ira" };
+        Arrays.sort(names);
+        System.out.println("The names in alphabetical order are: ");
+        for (int i = 0; i < n; i++) {
+            System.out.println(names[i]);
+        }
+    }
+}
+---------------------------------------------------------------------
+Q8. Accept 5 name from user , accept a name from user and check that name is there in array or not=>
+import java.util.Arrays;
+
+class Main {
+  public static void main(String[] args){
+
+    String[] strings = {"One","Two","Three","Four","Five"};
+    String toFind= "Four";
+
+    boolean found = Arrays.stream(strings).anyMatch(t -> t.equals(toFind));
+
+    if(found)
+      System.out.println(toFind + " is found.");
+    else
+      System.out.println(toFind + " is not found.");
+  }
+}
+---------------------------------------------------------------------------------------
+Q.9.Accept a string accept a character and delete all occurrence of that character.=>
+import java.util.*;
+public class GFG {
+ 
+    public static String removechar(String word, char ch)
+    {
+        StringBuilder s = new StringBuilder(word);
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == ch) {
+                s.deleteCharAt(i);
+                i--;
+            }
+        }
+        return s.toString();
+    }
+    public static void main(String args[])
+    {
+        String word = "shrisha";
+        char ch = 'a';
+        System.out.println(removechar(word, ch));
+    }
+}
+o/p--->shrish
+-------------------------------------------------------------------------------------------------
+Q.10 Write a program to extract the portion of a string and print the extracted string. Assume that m 
+characters are extracted, starting from n character==>
+public class GFG
+{  
+    public static void main(String[] args)
+    {  
+        String s1="Shrisha";    
+        String substr = s1.substring(0); // Starts with 0 and goes to end  
+        System.out.println(substr);  
+        String substr2 = s1.substring(4,7); // Starts from 4 and goes to 7  
+        System.out.println(substr2);    
+    }  
+}  
+o/p==>Shrisha
+           sha
+-----------------------------------------------------------------------------------
+Q11.
+ 
+
+
+--------------------------------------------------------------------------------------------
+//create UniqueElementsExample1 class to get distinct element from the array 
+import java.io.*;      
+class UniqueEle {   
+    public static void main (String[] args)    
+    {   
+        int arrayWithDuplicates[] = { 10, 3, 5, 3, 9, 22, 4, 3, 1, 5, 6 };  
+        int len = arrayWithDuplicates.length;   
+        int[] distinctArray = new int[20];    
+        int index = 0;  
+        for (int i = 0; i < len; i++)   
+        {   
+            int flag = 0; 
+            for (int j = 0; j < i; j++){  
+                if (arrayWithDuplicates[i] == arrayWithDuplicates[j]){   
+                    flag = 1;  
+                    break;   
+                }  
+            }  
+            if (flag == 0){   
+                distinctArray[index] = arrayWithDuplicates[i];  
+                index++;    
+            }  
+        }         
+        for(int i = 0; i < index; i++)  
+            System.out.print( distinctArray[i] + " ");   
+    }         
+}
+-----------------------------------------------------------------------------------------------   
