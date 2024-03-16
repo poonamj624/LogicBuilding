@@ -1,3 +1,44 @@
+https://www.google.com/search?q=java+string+coding+interview+questions+and+answers+part+2&rlz=1C1CHBD_enIN1069IN1069&oq=java+string+coding+interview+questions+and+answers+part+2&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQIRigATIHCAIQIRigATIHCAMQIRigATIHCAQQIRifBTIHCAUQIRiPAtIBCjcwMzI1ajBqMTWoAgCwAgA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:5fdfabce,vid:OG_fzP5O4lk,st:0
+-------------------------------------------------------------------------------------------------
+// Java program to find a Leap Year----->
+import java.io.*;
+public class LeapYear {
+	public static void isLeapYear(int year)
+	{
+		boolean is_leap_year = false;
+		if (year % 4 == 0) {
+			is_leap_year = true;
+			// To identify whether it is a
+			// century year or not
+			if (year % 100 == 0) {
+				// Checking if year is divisible by 400
+				// therefore century leap year
+				if (year % 400 == 0)
+					is_leap_year = true;
+				else
+					is_leap_year = false;
+			}
+		}
+		else
+			is_leap_year = false;
+
+		if (!is_leap_year)
+			System.out.println(year + " : Non Leap-year");
+		else
+			System.out.println(year + " : Leap-year");
+	}
+	public static void main(String[] args)
+	{
+		isLeapYear(2000);
+		isLeapYear(2002);
+	}
+}
+
+
+
+
+
+
 Q. Accept string from user , accept a character from user and count the occurrence of the same==>
 
 class FindOccurances
@@ -208,8 +249,32 @@ public class GFG
 o/p==>Shrisha
            sha
 -----------------------------------------------------------------------------------
-Q11.
- 
+Q11.Search Elemennt in an array----------->
+
+ public class key
+{
+	
+	public static void main(String[] args) 
+	{
+		int searchEle[]= {8,7,6,5,5,3,2,3};
+		int key=9;
+		int i,flag=0;
+		for(i=0;i<searchEle.length;i++)
+		{
+				if(searchEle[i]==key)
+				{
+					flag=1;
+					break;
+				}	
+		}
+			if(flag==0)
+				System.out.println("not found");
+			else
+			System.out.println("ele found");
+		
+	}
+}
+
 
 
 --------------------------------------------------------------------------------------------
@@ -240,4 +305,359 @@ class UniqueEle {
             System.out.print( distinctArray[i] + " ");   
     }         
 }
------------------------------------------------------------------------------------------------   
+----------------------------------------------------------------------------------------------- 
+------words  count------------------  
+package string1;
+
+public class key
+{
+	public static int countWords(String str)
+	{
+		int cnt=1;
+		for(int i=0;i<str.length();i++)
+		{
+			if(str.charAt(i)=='  ' && str.charAt(i+1)!=' ')
+			{
+				cnt++;
+			}
+		}
+		return cnt;
+	}
+	public static void main(String[] args) 
+	{
+		
+		String str="Poonam Jadhav";
+		System.out.println(countWords(str));
+	}
+}
+
+
+
+/*
+ * public class key
+{
+
+	public static void main(String[] args) 
+	{
+		String name="poonam";
+		String reverseString="";
+		for(int i=name.length()-1;i>=0;i--)
+		{
+			reverseString=reverseString+name.charAt(i);
+		}
+		System.out.println("The reverse string : "+name+" is: ");
+		System.out.println(reverseString);
+	}
+}
+
+ */
+---------------------------------------------------------------------------------------------
+
+public class First
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter numbers: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		
+		if(num/2*2==num)
+			System.out.println("even");
+		else
+			System.out.println("odd");
+	}
+}
+-----------------------------
+import java.util.Scanner;
+
+public class even_odd
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter numbers: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		while(num>2)
+		{
+			num=num-2;
+		}
+		if(num==2)
+			System.out.println("num is even");
+		else
+			System.out.println("num is odd");
+	}
+}
+----------------------------
+public class First
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter numbers: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		if(num%2==0)
+			System.out.println("even");
+		else
+			System.out.println("odd");
+	}
+}
+------------
+import java.util.Scanner;
+public class First
+{
+	public static void main(String[] args)
+	{
+		System.out.println("Enter numbers: ");
+		Scanner sc=new Scanner(System.in);
+		int num=sc.nextInt();
+		while(num>2)
+		{
+			num=num-2;	
+		}
+		if(num==2)
+			System.out.println("even");
+		else
+			System.out.println("odd");
+	}
+}
+====================================================
+Reverse number--->
+public class ReverNum
+{
+	public static void main(String[] args)
+	{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter number");
+	int num=sc.nextInt();
+	int no;
+	while(num!=0)
+	{
+		no=num%10;
+		System.out.print(""+no);
+		num=num/10;
+	}
+
+	}
+}
+====================================================
+/*Q.1 Accept 10 numbers from user and do sum of it.(do not use array)*/
+public class SumOfDigit 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Enter number");
+		Scanner sc=new Scanner(System.in);
+		int num,sum=0;
+		for(int i=0;i<3;i++)
+		{
+			num=sc.nextInt();
+			sum=sum+num;
+		}
+		System.out.println("sum="+sum);	
+	}
+}
+======================================================
+Q.6 Accept a number from user and check if it is palindrome number or not eg (121)
+
+package Day1;
+
+import java.util.Scanner;
+
+public class Pallindrom
+{
+
+	public static void main(String[] args)
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number");
+		int num=sc.nextInt();
+		int r,rev=0, no=num;
+		
+		while(num!=0)
+		{
+			r=num%10;
+			rev=rev*10+r;
+			num=num/10;	
+		}
+		
+		if(no==rev)
+			System.out.println("palindrom");
+		else
+		System.out.println("not palindrom");
+	}
+
+}
+=====================================================
+
+Q1.
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        int num1,num2,sum,diff,product,div;
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter 2 Numbers: ");
+        num1=sc.nextInt();
+        num2=sc.nextInt();
+        sum=num1+num2;
+        diff=num1-num2;
+        product=num1*num2;
+
+
+        div=num1/num2;
+        System.out.print("\nSum= "+sum);
+        System.out.print("\nDifference= "+diff);
+        System.out.print("\nProduct= "+product);
+        System.out.print("\nDivision= "+div);
+    }
+}
+
+
+Q.Singlton.........
+
+#include<iostream>
+using namespace std;
+class Singleton
+{
+private:
+	int num;
+	static Singleton s;
+	Singleton()
+	{
+		//default constructor
+	}
+	Singleton(Singleton& ref)
+	{
+		cout << "In copy constructor: "<<endl;
+	}
+public: 
+	void display()
+	{
+		cout << "Inside display function: " << endl;
+	}
+	static Singleton& getSingleton()
+	{
+		return s;
+	}
+};
+Singleton Singleton::s;
+int main()
+{
+	Singleton& ref = Singleton::getSingleton();
+	ref.display();
+
+}
+
+
+Q.6.1
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,j;
+	    for(i=1;i<=4;i++)
+	    {
+	        for(j=1;j<=i;j++)
+	        {
+	            System.out.print("*");
+	        }
+	       System.out.println();
+	    }
+	}
+}
+
+Q6.2
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,j,s;
+	    for(i=1;i<=4;i++)
+	    {
+	        for(s=1;s<i;s++)
+	        {
+	            System.out.print(" ");
+
+	        }
+	        for(j=i;j<=4;j++)
+	        {
+	            System.out.print("*");
+	        }
+	       System.out.println();
+	    }
+	}
+}
+
+
+Q2.
+
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.print("Enter 2 Numbers: ");
+        int num1=sc.nextInt();
+        int num2=sc.nextInt();
+        int result=num1>num2?num1:num2;
+        System.out.print("Large number= "+result);
+    }
+}
+
+Q4.
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter number");
+	    int no,n,r,cube=0,arm=0;
+	    no=sc.nextInt();
+	    n=no;
+	    while(no!=0)
+	    {
+	        r=no%10;
+	        cube=r*r*r;
+	        arm=arm+cube;
+	        no=no/10;
+	        
+	    }
+	    
+	    if(n==arm)
+	     	System.out.println("Armstrong");
+	     else
+	        	System.out.println("Not armstrong");
+	}
+}
+
+Q.5
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int i,j,temp=0;
+	   int arr[]={6,2,5,1};
+	  
+	   for(i=0;i<4;i++)
+	    {
+	        for(j=0;j<4-i;j++)
+	        {
+	            if(arr[j]>arr[j+1])
+	            {
+	                temp=arr[j];
+	                arr[j]=arr[j+1];
+	                arr[j+1]=temp;
+	            }
+	        }
+	    }
+	    for(int n:arr)
+	            System.out.print(n);
+	}
+}
+
